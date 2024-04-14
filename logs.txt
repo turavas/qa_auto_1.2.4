@@ -1,0 +1,176 @@
+# Создание 3 коммитов
+
+commit c95adb062741fb9e1c4cb460132e17deeaa02c0f (**HEAD** -> **main**)
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:03:33 2024 +0200
+
+    Third
+
+commit 47b74fd825c371dd2b25d5dd6da1ec73b61ac60b
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:02:54 2024 +0200
+
+   Second
+
+commit 9839221f38fc6047c57f00cb9cdc050726c9d3ec
+ Author: turavas <olapola971@gmail.com>
+ Date:   Sun Apr 14 13:01:44 2024 +0200
+
+    First
+
+
+# git reset --soft второй коммит 
+
+commit 47b74fd825c371dd2b25d5dd6da1ec73b61ac60b (HEAD -> main)
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:02:54 2024 +0200
+
+    Second
+
+commit 9839221f38fc6047c57f00cb9cdc050726c9d3ec
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:01:44 2024 +0200
+
+    First
+
+# git reset --soft третий коммит
+commit c95adb062741fb9e1c4cb460132e17deeaa02c0f (HEAD -> main)
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:03:33 2024 +0200
+
+    Third
+
+commit 47b74fd825c371dd2b25d5dd6da1ec73b61ac60b
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:02:54 2024 +0200
+
+    Second
+
+commit 9839221f38fc6047c57f00cb9cdc050726c9d3ec
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:01:44 2024 +0200
+
+    First
+
+git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    new_1.md
+        deleted:    new_2.md
+        deleted:    new_3.md
+
+
+HP@cola MINGW64 ~/Git/1/test_project/qa_auto_1.2.4 (main)
+$ git reset --mixed c95adb0
+Unstaged changes after reset:
+D       new_1.md
+D       new_2.md
+D       new_3.md
+
+HP@cola MINGW64 ~/Git/1/test_project/qa_auto_1.2.4 (main)
+$ git reset --mixed 47b74fd
+Unstaged changes after reset:
+D       new_1.md
+D       new_2.md
+D       new_3.md
+
+HP@cola MINGW64 ~/Git/1/test_project/qa_auto_1.2.4 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    new_1.md
+        deleted:    new_2.md
+        deleted:    new_3.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new3.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# git log
+commit 47b74fd825c371dd2b25d5dd6da1ec73b61ac60b (HEAD -> main)
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:02:54 2024 +0200
+
+    Second
+
+commit 9839221f38fc6047c57f00cb9cdc050726c9d3ec
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:01:44 2024 +0200
+
+    First
+   
+
+# git reset --hard 47b74fd
+HEAD is now at 47b74fd Second
+
+HP@cola MINGW64 ~/Git/1/test_project/qa_auto_1.2.4 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new3.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+commit 47b74fd825c371dd2b25d5dd6da1ec73b61ac60b (HEAD -> main)
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:02:54 2024 +0200
+
+    Second
+
+commit 9839221f38fc6047c57f00cb9cdc050726c9d3ec
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:01:44 2024 +0200
+
+    First
+
+commit 7ca416fa1932c34af6ddbc4ad7daef7a54440def
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 12:45:33 2024 +0200
+
+    First 
+
+
+git reset --hard c95adb0
+HEAD is now at c95adb0 Third
+
+git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+git log
+commit c95adb062741fb9e1c4cb460132e17deeaa02c0f (HEAD -> main)
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:03:33 2024 +0200
+
+    Third
+
+commit 47b74fd825c371dd2b25d5dd6da1ec73b61ac60b
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:02:54 2024 +0200
+
+    Second
+
+commit 9839221f38fc6047c57f00cb9cdc050726c9d3ec
+Author: turavas <olapola971@gmail.com>
+Date:   Sun Apr 14 13:01:44 2024 +0200
+
+    First
+    
